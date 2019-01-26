@@ -741,13 +741,13 @@ int getCost(int cardNumber)
 
 int gardensEffect()
 {
-  return -1;
+  return 0;
 }
 
 int outpostEffect(struct gameState *state, int handPos)
 {
   //set outpost flag
-  state->outpostPlayed++;
+  state->outpostPlayed--;
 
   //discard card
   int currentPlayer = whoseTurn(state);
@@ -775,7 +775,7 @@ int smithyEffect(struct gameState *state, int handPos)
   int currentPlayer = whoseTurn(state);
 
   //+3 Cards
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i < 4; i++)
   {
     drawCard(currentPlayer, state);
   }
@@ -793,7 +793,7 @@ int adventurerEffect(struct gameState *state)
   int temphand[MAX_HAND];
   int z = 0;
 
-  while (drawntreasure < 2)
+  while (drawntreasure < 3)
   {
     if (state->deckCount[currentPlayer] < 1)
     { //if the deck is empty we need to shuffle discard and add to deck
