@@ -1,6 +1,6 @@
 
 /*
-unit test for card effect smithy
+ unit test card outpost
  */
 
 #include "dominion.h"
@@ -11,7 +11,7 @@ unit test for card effect smithy
 #include "rngs.h"
 #include <stdlib.h>
 
-#define TESTCARD "smithy"
+#define TESTCARD "outpost"
 
 int main()
 {
@@ -32,20 +32,19 @@ int main()
 
     // initialize a game state and player cards
     initializeGame(numPlayers, k, seed, &G);
+    // create a copy of the original game state
+    memcpy(&testG, &G, sizeof(struct gameState));
 
     printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
+    outpostEffect(&testG, 0);
 
-    // copy the game state to a test case
-    memcpy(&testG, &G, sizeof(struct gameState));
-    smithyEffect(&testG, 0);
+    // ----------- TEST 1: Modify outpost flag --------------
+    printf("TEST 1: outpost flag is set\n");
+    printf("Expected value: %d, Result: %d\n", G.outpostPlayed + 1, testG.outpostPlayed);
 
-    // ----------- TEST 1: +3 cards to hand count --------------
-    printf("TEST 1: +3 cards to hand count\n");
-    printf("Expected value: %d, Result: %d\n", G.handCount[G.whoseTurn] + 3, testG.handCount[testG.whoseTurn]);
-
-    // ----------- TEST 2: -3 cards to the deck--------------
-    printf("TEST 1: -3 cards to deck\n");
-    printf("Expected value: %d, Result: %d\n", G.deckCount[G.whoseTurn] - 3, testG.deckCount[testG.whoseTurn]);
+    // ----------- TEST 2: Discard card --------------
+    printf("TEST 2: Discard a card from hand\n");
+    printf("Expected value: %d, Result: %d\n", G.handCount[0] - 1, testG.handCount[0]);
 
     return 0;
 }
