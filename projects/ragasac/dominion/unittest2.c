@@ -12,7 +12,17 @@
 
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
-
+int printTestResult(int a, int b)
+{
+    if (a == b)
+    {
+        printf("Test Passed!\n");
+    }
+    else
+    {
+        printf("Test Failed!\n");
+    }
+}
 int main()
 {
     printf("TESTING isGameOver()...\n");
@@ -26,6 +36,7 @@ int main()
     printf("TEST 1: Testing no province cards \n");
     printf("isGameOver() = %d, Expected = %d\n", t1, 1);
 #endif
+    printTestResult(t1, 1);
     //assert(t1 == 1);
 
     // Test 2 - some province cards
@@ -41,6 +52,7 @@ int main()
     printf("TEST 2: Testing some province cards \n");
     printf("isGameOver() = %d, Expected = %d\n", t2, 0);
 #endif
+    printTestResult(t2, 0);
     //assert(t2 == 0);
 
     // Test 3 - no supply counts are at 0
@@ -55,6 +67,7 @@ int main()
     printf("TEST 3: Testing no supply counts are at 0 \n");
     printf("isGameOver() = %d, Expected = %d\n", t3, 0);
 #endif
+    printTestResult(t3, 0);
     //assert(t3 == 0);
 
     // Test 4 - no province count, but all supply counts are 0
@@ -70,8 +83,8 @@ int main()
     printf("TEST 4: Testing no province count, but all supply counts are 0 \n");
     printf("isGameOver() = %d, Expected = %d\n", t4, 1);
 #endif
+    printTestResult(t4, 1);
     //assert(t4 == 1);
 
-    printf("All tests passed!\n");
     return 0;
 }

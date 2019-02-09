@@ -1,53 +1,106 @@
+TESTING getCost()...
+TEST 1: Testing adventurer card 
+getCost() = 6, Expected = 6
+Test Passed!
+TEST 2: Testing council_room card 
+getCost() = 5, Expected = 5
+Test Passed!
+TEST 3: Testing feast card 
+getCost() = 4, Expected = 4
+Test Passed!
+TEST 4: Testing gardens card 
+getCost() = 4, Expected = 4
+Test Passed!
+TEST 5: Testing mine card 
+getCost() = 5, Expected = 5
+Test Passed!
+TEST 6: Testing remodel card 
+getCost() = 4, Expected = 4
+Test Passed!
+TEST 7: Testing smithy card 
+getCost() = 4, Expected = 5
+Test Failed!
+TEST 8: Testing baron card 
+getCost() = 4, Expected = 4
+Test Passed!
+TEST 9: Testing great_hall card 
+getCost() = 3, Expected = 3
+Test Passed!
+TEST 10: Testing village card 
+getCost() = 3, Expected = 3
+Test Passed!
 TESTING isGameOver()...
 TEST 1: Testing no province cards 
 isGameOver() = 1, Expected = 1
+Test Passed!
 TEST 2: Testing some province cards 
 isGameOver() = 0, Expected = 0
+Test Passed!
 TEST 3: Testing no supply counts are at 0 
 isGameOver() = 0, Expected = 0
+Test Passed!
 TEST 4: Testing no province count, but all supply counts are 0 
 isGameOver() = 1, Expected = 1
-All tests passed!
+Test Passed!
 TESTING supplyCount()...
 TEST 1: Test supplyCount(), feast (0 count) 
 supplyCount() = 0, Expected = 0
+Test Passed!
 TEST 2: Test supplyCount(), feast (1 count) 
 supplyCount() = 1, Expected = 1
+Test Passed!
 TEST 3: Test supplyCount(), feast (-1 count) 
 supplyCount() = -1, Expected = -1
-All tests passed!
+Test Passed!
 TESTING whoseTurn()...
 TEST 1: User 0's turn 
 supplyCount() = 0, Expected = 0
+Test Passed!
 TEST 2: User 1's turn 
 supplyCount() = 1, Expected = 1
+Test Passed!
 TEST 3: User 2's turn 
 supplyCount() = 2, Expected = 2
+Test Passed!
 TEST 4: User 3's turn 
 supplyCount() = 3, Expected = 3
-All tests passed!
+Test Passed!
 ----------------- Testing Card: smithy ----------------
 TEST 1: +3 cards to hand count
 Expected value: 8, Result: 9
+Test Failed!
 TEST 1: -3 cards to deck
 Expected value: 2, Result: 0
+Test Failed!
 ----------------- Testing Card: adventurer ----------------
 TEST 1: +2 cards to hand count
 Expected value: 7, Result: 8
+Test Failed!
 TEST 2: -2 cards to deck
 Expected value: 3, Result: 2
+Test Failed!
 TEST 3: Check that the user drew treasure cards
 Expected value: 2, Result: 2
+Test Passed!
 ----------------- Testing Card: outpost ----------------
+TEST 1: outpost flag is set
+Expected value: 1, Result: -1
+Test Failed!
+TEST 2: Discard a card from hand
+Expected value: 4, Result: 4
+Test Passed!
 ----------------- Testing Card: great_hall ----------------
 TEST 1: -1 cards from deck count
 Expected value: 4, Result: 4
+Test Passed!
 TEST 2: +1 action
 Expected value: 2, Result: 2
+Test Passed!
 TEST 3: Discard a card from hand
 Expected value: 4, Result: 5
+Test Failed!
 File 'dominion.c'
-Lines executed:24.14% of 584
+Lines executed:26.20% of 584
 Creating 'dominion.c.gcov'
 
         -:    0:Source:dominion.c
@@ -733,9 +786,9 @@ Creating 'dominion.c.gcov'
        29:  676:  return 0;
         -:  677:}
         -:  678:
-    #####:  679:int getCost(int cardNumber)
+       10:  679:int getCost(int cardNumber)
         -:  680:{
-    #####:  681:  switch (cardNumber)
+       10:  681:  switch (cardNumber)
         -:  682:  {
         -:  683:  case curse:
     #####:  684:    return 0;
@@ -752,25 +805,25 @@ Creating 'dominion.c.gcov'
         -:  695:  case gold:
     #####:  696:    return 6;
         -:  697:  case adventurer:
-    #####:  698:    return 6;
+        1:  698:    return 6;
         -:  699:  case council_room:
-    #####:  700:    return 5;
+        1:  700:    return 5;
         -:  701:  case feast:
-    #####:  702:    return 4;
+        1:  702:    return 4;
         -:  703:  case gardens:
-    #####:  704:    return 4;
+        1:  704:    return 4;
         -:  705:  case mine:
-    #####:  706:    return 5;
+        1:  706:    return 5;
         -:  707:  case remodel:
-    #####:  708:    return 4;
+        1:  708:    return 4;
         -:  709:  case smithy:
-    #####:  710:    return 4;
+        1:  710:    return 4;
         -:  711:  case village:
-    #####:  712:    return 3;
+        1:  712:    return 3;
         -:  713:  case baron:
-    #####:  714:    return 4;
+        1:  714:    return 4;
         -:  715:  case great_hall:
-    #####:  716:    return 3;
+        1:  716:    return 3;
         -:  717:  case minion:
     #####:  718:    return 5;
         -:  719:  case steward:
@@ -824,7 +877,7 @@ Creating 'dominion.c.gcov'
         -:  767:
         -:  768:  //discard card from hand
         1:  769:  discardCard(handPos, currentPlayer, state, 0);
-        1:  770:  return 1;
+        1:  770:  return 0;
         -:  771:}
         -:  772:
         1:  773:int smithyEffect(struct gameState *state, int handPos)
@@ -1555,9 +1608,9 @@ Creating 'dominion.c.gcov'
         -: 1498:
         -: 1499://end of dominion.c
 File 'dominion.c'
-Lines executed:24.14% of 584
-Branches executed:21.10% of 417
-Taken at least once:16.55% of 417
+Lines executed:26.20% of 584
+Branches executed:27.82% of 417
+Taken at least once:18.94% of 417
 Calls executed:17.17% of 99
 Creating 'dominion.c.gcov'
 
@@ -2456,38 +2509,38 @@ branch  1 never executed
        29:  676:  return 0;
         -:  677:}
         -:  678:
-function getCost called 0 returned 0% blocks executed 0%
-    #####:  679:int getCost(int cardNumber)
+function getCost called 10 returned 100% blocks executed 40%
+       10:  679:int getCost(int cardNumber)
         -:  680:{
-    #####:  681:  switch (cardNumber)
-branch  0 never executed
-branch  1 never executed
-branch  2 never executed
-branch  3 never executed
-branch  4 never executed
-branch  5 never executed
-branch  6 never executed
-branch  7 never executed
-branch  8 never executed
-branch  9 never executed
-branch 10 never executed
-branch 11 never executed
-branch 12 never executed
-branch 13 never executed
-branch 14 never executed
-branch 15 never executed
-branch 16 never executed
-branch 17 never executed
-branch 18 never executed
-branch 19 never executed
-branch 20 never executed
-branch 21 never executed
-branch 22 never executed
-branch 23 never executed
-branch 24 never executed
-branch 25 never executed
-branch 26 never executed
-branch 27 never executed
+       10:  681:  switch (cardNumber)
+branch  0 taken 0%
+branch  1 taken 0%
+branch  2 taken 0%
+branch  3 taken 0%
+branch  4 taken 0%
+branch  5 taken 0%
+branch  6 taken 0%
+branch  7 taken 10%
+branch  8 taken 10%
+branch  9 taken 10%
+branch 10 taken 10%
+branch 11 taken 10%
+branch 12 taken 10%
+branch 13 taken 10%
+branch 14 taken 10%
+branch 15 taken 10%
+branch 16 taken 10%
+branch 17 taken 0%
+branch 18 taken 0%
+branch 19 taken 0%
+branch 20 taken 0%
+branch 21 taken 0%
+branch 22 taken 0%
+branch 23 taken 0%
+branch 24 taken 0%
+branch 25 taken 0%
+branch 26 taken 0%
+branch 27 taken 0%
         -:  682:  {
         -:  683:  case curse:
     #####:  684:    return 0;
@@ -2504,25 +2557,25 @@ branch 27 never executed
         -:  695:  case gold:
     #####:  696:    return 6;
         -:  697:  case adventurer:
-    #####:  698:    return 6;
+        1:  698:    return 6;
         -:  699:  case council_room:
-    #####:  700:    return 5;
+        1:  700:    return 5;
         -:  701:  case feast:
-    #####:  702:    return 4;
+        1:  702:    return 4;
         -:  703:  case gardens:
-    #####:  704:    return 4;
+        1:  704:    return 4;
         -:  705:  case mine:
-    #####:  706:    return 5;
+        1:  706:    return 5;
         -:  707:  case remodel:
-    #####:  708:    return 4;
+        1:  708:    return 4;
         -:  709:  case smithy:
-    #####:  710:    return 4;
+        1:  710:    return 4;
         -:  711:  case village:
-    #####:  712:    return 3;
+        1:  712:    return 3;
         -:  713:  case baron:
-    #####:  714:    return 4;
+        1:  714:    return 4;
         -:  715:  case great_hall:
-    #####:  716:    return 3;
+        1:  716:    return 3;
         -:  717:  case minion:
     #####:  718:    return 5;
         -:  719:  case steward:
@@ -2584,7 +2637,7 @@ call    0 returned 100%
         -:  768:  //discard card from hand
         1:  769:  discardCard(handPos, currentPlayer, state, 0);
 call    0 returned 100%
-        1:  770:  return 1;
+        1:  770:  return 0;
         -:  771:}
         -:  772:
 function smithyEffect called 1 returned 100% blocks executed 100%

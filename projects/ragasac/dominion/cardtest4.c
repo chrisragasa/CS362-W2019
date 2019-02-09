@@ -13,6 +13,18 @@
 
 #define TESTCARD "great_hall"
 
+int printTestResult(int a, int b)
+{
+    if (a == b)
+    {
+        printf("Test Passed!\n");
+    }
+    else
+    {
+        printf("Test Failed!\n");
+    }
+}
+
 int main()
 {
     int newCards = 0;
@@ -41,14 +53,17 @@ int main()
     // ----------- TEST 1:  draw card from deck --------------
     printf("TEST 1: -1 cards from deck count\n");
     printf("Expected value: %d, Result: %d\n", G.deckCount[0] - 1, testG.deckCount[0]);
+    printTestResult(G.deckCount[0] - 1, testG.deckCount[0]);
 
     // ----------- TEST 2:  +1 action --------------
     printf("TEST 2: +1 action\n");
     printf("Expected value: %d, Result: %d\n", G.numActions + 1, testG.numActions);
+    printTestResult(G.numActions + 1, testG.numActions);
 
     // ----------- TEST 3: Discard card --------------
     printf("TEST 3: Discard a card from hand\n");
     printf("Expected value: %d, Result: %d\n", G.handCount[0] - 1, testG.handCount[0]);
+    printTestResult(G.handCount[0] - 1, testG.handCount[0]);
 
     return 0;
 }

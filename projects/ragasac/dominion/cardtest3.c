@@ -13,6 +13,18 @@
 
 #define TESTCARD "outpost"
 
+int printTestResult(int a, int b)
+{
+    if (a == b)
+    {
+        printf("Test Passed!\n");
+    }
+    else
+    {
+        printf("Test Failed!\n");
+    }
+}
+
 int main()
 {
     int newCards = 0;
@@ -41,10 +53,12 @@ int main()
     // ----------- TEST 1: Modify outpost flag --------------
     printf("TEST 1: outpost flag is set\n");
     printf("Expected value: %d, Result: %d\n", G.outpostPlayed + 1, testG.outpostPlayed);
+    printTestResult(G.outpostPlayed + 1, testG.outpostPlayed);
 
     // ----------- TEST 2: Discard card --------------
     printf("TEST 2: Discard a card from hand\n");
     printf("Expected value: %d, Result: %d\n", G.handCount[0] - 1, testG.handCount[0]);
+    printTestResult(G.handCount[0] - 1, testG.handCount[0]);
 
     return 0;
 }

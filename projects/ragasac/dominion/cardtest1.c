@@ -13,6 +13,18 @@ unit test for card effect smithy
 
 #define TESTCARD "smithy"
 
+int printTestResult(int a, int b)
+{
+    if (a == b)
+    {
+        printf("Test Passed!\n");
+    }
+    else
+    {
+        printf("Test Failed!\n");
+    }
+}
+
 int main()
 {
     int newCards = 0;
@@ -42,10 +54,12 @@ int main()
     // ----------- TEST 1: +3 cards to hand count --------------
     printf("TEST 1: +3 cards to hand count\n");
     printf("Expected value: %d, Result: %d\n", G.handCount[G.whoseTurn] + 3, testG.handCount[testG.whoseTurn]);
+    printTestResult(G.handCount[G.whoseTurn] + 3, testG.handCount[testG.whoseTurn]);
 
     // ----------- TEST 2: -3 cards to the deck--------------
     printf("TEST 1: -3 cards to deck\n");
     printf("Expected value: %d, Result: %d\n", G.deckCount[G.whoseTurn] - 3, testG.deckCount[testG.whoseTurn]);
+    printTestResult(G.deckCount[G.whoseTurn] - 3, testG.deckCount[testG.whoseTurn]);
 
     return 0;
 }

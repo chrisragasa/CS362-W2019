@@ -13,6 +13,18 @@
 // set NOISY_TEST to 0 to remove printfs from output
 #define NOISY_TEST 1
 
+int printTestResult(int a, int b)
+{
+    if (a == b)
+    {
+        printf("Test Passed!\n");
+    }
+    else
+    {
+        printf("Test Failed!\n");
+    }
+}
+
 int main()
 {
     printf("TESTING whoseTurn()...\n");
@@ -26,6 +38,7 @@ int main()
     printf("TEST 1: User 0's turn \n");
     printf("supplyCount() = %d, Expected = %d\n", t1, 0);
 #endif
+    printTestResult(t1, 0);
     //assert(t1 == 0);
 
     // Test 2 - User 1's turn
@@ -37,6 +50,7 @@ int main()
     printf("TEST 2: User 1's turn \n");
     printf("supplyCount() = %d, Expected = %d\n", t2, 1);
 #endif
+    printTestResult(t2, 1);
     //assert(t2 == 1);
 
     // Test 3 - User 2's turn
@@ -48,6 +62,7 @@ int main()
     printf("TEST 3: User 2's turn \n");
     printf("supplyCount() = %d, Expected = %d\n", t3, 2);
 #endif
+    printTestResult(t3, 2);
     //assert(t3 == 2);
 
     // Test 4 - User 3's turn
@@ -59,8 +74,8 @@ int main()
     printf("TEST 4: User 3's turn \n");
     printf("supplyCount() = %d, Expected = %d\n", t4, 3);
 #endif
+    printTestResult(t4, 3);
     //assert(t4 == 3);
 
-    printf("All tests passed!\n");
     return 0;
 }

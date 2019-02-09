@@ -13,6 +13,18 @@
 
 #define TESTCARD "adventurer"
 
+int printTestResult(int a, int b)
+{
+    if (a == b)
+    {
+        printf("Test Passed!\n");
+    }
+    else
+    {
+        printf("Test Failed!\n");
+    }
+}
+
 int main()
 {
     int newCards = 0;
@@ -49,10 +61,12 @@ int main()
     // ----------- TEST 1: Increase in cards to hand count --------------
     printf("TEST 1: +2 cards to hand count\n");
     printf("Expected value: %d, Result: %d\n", G.handCount[0] + 2, testG.handCount[0]);
+    printTestResult(G.handCount[0] + 2, testG.handCount[0]);
 
     // ----------- TEST 2: Decrease in cards to the deck--------------
     printf("TEST 2: -2 cards to deck\n");
     printf("Expected value: %d, Result: %d\n", G.deckCount[0] - 2, testG.deckCount[0]);
+    printTestResult(G.deckCount[0] - 2, testG.deckCount[0]);
 
     // ----------- TEST 3: Check that the user drew treasure cards --------------
     printf("TEST 3: Check that the user drew treasure cards\n");
@@ -66,6 +80,7 @@ int main()
         }
     }
     printf("Expected value: %d, Result: %d\n", 2, treasureCards);
+    printTestResult(2, treasureCards);
 
     return 0;
 }
