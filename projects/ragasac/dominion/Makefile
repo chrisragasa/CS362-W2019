@@ -44,6 +44,9 @@ randomtestsresults: randomtestadventurer
 	./randomtestadventurer >> randomtestresults.out
 	./randomtestcard1 >> randomtestresults.out
 	./randomtestcard2 >> randomtestresults.out
+	./randomtestadventurer >> randomtestadventurer.out
+	./randomtestcard1 >> randomtestcard1.out
+	./randomtestcard2 >> randomtestcard2.out
 	gcov -b -f dominion.c >> randomtestresults.out
 	cat dominion.c.gcov >> randomtestresults.out
 
