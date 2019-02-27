@@ -11,7 +11,7 @@
 #include "rngs.h"
 #include <stdlib.h>
 
-#define TESTCARD "adventurer"
+#define TESTCARD "great_hall"
 
 void printTestResult(int a, int b)
 {

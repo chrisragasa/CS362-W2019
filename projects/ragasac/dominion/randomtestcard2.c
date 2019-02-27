@@ -1,6 +1,6 @@
 
 /*
- random test for great_hall card
+ random test for smithy card
  */
 
 #include "dominion.h"
@@ -11,7 +11,7 @@
 #include "rngs.h"
 #include <stdlib.h>
 
-#define TESTCARD "adventurer"
+#define TESTCARD "smithy"
 
 void printTestResult(int a, int b)
 {
@@ -43,7 +43,7 @@ int main()
     initializeGame(numPlayers, k, seed, &G);
 
     // Print test type
-    printf("Performing random tests for Great Hall Card...\n");
+    printf("Performing random tests for Smithy Card...\n");
 
     // perform random tests
     while (currTest < numTests)
