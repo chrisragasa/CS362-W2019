@@ -89,7 +89,7 @@ int main()
     int t7 = getCost(smithy);
 #if (NOISY_TEST == 1)
     printf("TEST 7: Testing smithy card \n");
-    printf("getCost() = %d, Expected = %d\n", t7, 5);
+    printf("getCost() = %d, Expected = %d\n", t7, 4);
 #endif
     printTestResult(t7, 5);
     //assert(t7 == 4);

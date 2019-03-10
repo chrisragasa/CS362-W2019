@@ -1,0 +1,151 @@
+Performing random tests for Adventurer Card...
+TEST: +2 cards to hand count (0)
+Expected value: 73, Result: 75
+Test Passed!
+TEST: +2 cards to hand count (1)
+Expected value: 378, Result: 380
+Test Passed!
+TEST: +2 cards to hand count (2)
+Expected value: 492, Result: 494
+Test Passed!
+TEST: +2 cards to hand count (3)
+Expected value: 229, Result: 231
+Test Passed!
+TEST: +2 cards to hand count (4)
+Expected value: 209, Result: 211
+Test Passed!
+TEST: +2 cards to hand count (5)
+Expected value: 278, Result: 280
+Test Passed!
+TEST: +2 cards to hand count (6)
+Expected value: 12, Result: 14
+Test Passed!
+TEST: +2 cards to hand count (7)
+Expected value: 149, Result: 151
+Test Passed!
+TEST: +2 cards to hand count (8)
+Expected value: 393, Result: 395
+Test Passed!
+TEST: +2 cards to hand count (9)
+Expected value: 91, Result: 93
+Test Passed!
+TEST: +2 cards to hand count (10)
+Expected value: 208, Result: 209
+Test Failed!
+TEST: +2 cards to hand count (11)
+Expected value: 196, Result: 198
+Test Passed!
+TEST: +2 cards to hand count (12)
+Expected value: 49, Result: 51
+Test Passed!
+TEST: +2 cards to hand count (13)
+Expected value: 408, Result: 410
+Test Passed!
+TEST: +2 cards to hand count (14)
+Expected value: 135, Result: 137
+Test Passed!
+TEST: +2 cards to hand count (15)
+Expected value: 36, Result: 38
+Test Passed!
+TEST: +2 cards to hand count (16)
+Expected value: 129, Result: 131
+Test Passed!
+TEST: +2 cards to hand count (17)
+Expected value: 404, Result: 406
+Test Passed!
+TEST: +2 cards to hand count (18)
+Expected value: 5, Result: 7
+Test Passed!
+TEST: +2 cards to hand count (19)
+Expected value: 337, Result: 339
+Test Passed!
+TEST: +2 cards to hand count (20)
+Expected value: 371, Result: 372
+Test Failed!
+TEST: +2 cards to hand count (21)
+Expected value: 397, Result: 399
+Test Passed!
+TEST: +2 cards to hand count (22)
+Expected value: 245, Result: 247
+Test Passed!
+TEST: +2 cards to hand count (23)
+Expected value: 399, Result: 401
+Test Passed!
+TEST: +2 cards to hand count (24)
+Expected value: 94, Result: 96
+Test Passed!
+TEST: +2 cards to hand count (25)
+Expected value: 30, Result: 32
+Test Passed!
+TEST: +2 cards to hand count (26)
+Expected value: 82, Result: 84
+Test Passed!
+TEST: +2 cards to hand count (27)
+Expected value: 212, Result: 214
+Test Passed!
+TEST: +2 cards to hand count (28)
+Expected value: 238, Result: 240
+Test Passed!
+TEST: +2 cards to hand count (29)
+Expected value: 179, Result: 181
+Test Passed!
+TEST: +2 cards to hand count (30)
+Expected value: 95, Result: 97
+Test Passed!
+TEST: +2 cards to hand count (31)
+Expected value: 260, Result: 262
+Test Passed!
+TEST: +2 cards to hand count (32)
+Expected value: 313, Result: 315
+Test Passed!
+TEST: +2 cards to hand count (33)
+Expected value: 344, Result: 346
+Test Passed!
+TEST: +2 cards to hand count (34)
+Expected value: 363, Result: 365
+Test Passed!
+TEST: +2 cards to hand count (35)
+Expected value: 159, Result: 161
+Test Passed!
+TEST: +2 cards to hand count (36)
+Expected value: 272, Result: 274
+Test Passed!
+TEST: +2 cards to hand count (37)
+Expected value: 385, Result: 387
+Test Passed!
+TEST: +2 cards to hand count (38)
+Expected value: 235, Result: 237
+Test Passed!
+TEST: +2 cards to hand count (39)
+Expected value: 11, Result: 13
+Test Passed!
+TEST: +2 cards to hand count (40)
+Expected value: 318, Result: 320
+Test Passed!
+TEST: +2 cards to hand count (41)
+Expected value: 33, Result: 35
+Test Passed!
+TEST: +2 cards to hand count (42)
+Expected value: 325, Result: 327
+Test Passed!
+TEST: +2 cards to hand count (43)
+Expected value: 377, Result: 379
+Test Passed!
+TEST: +2 cards to hand count (44)
+Expected value: 495, Result: 497
+Test Passed!
+TEST: +2 cards to hand count (45)
+Expected value: 331, Result: 333
+Test Passed!
+TEST: +2 cards to hand count (46)
+Expected value: 94, Result: 96
+Test Passed!
+TEST: +2 cards to hand count (47)
+Expected value: 15, Result: 17
+Test Passed!
+TEST: +2 cards to hand count (48)
+Expected value: 355, Result: 357
+Test Passed!
+TEST: +2 cards to hand count (49)
+Expected value: 108, Result: 109
+Test Failed!

@@ -62,7 +62,8 @@ int main()
         testG.handCount[0] = randHandCount;
 
         // call the smithy card
-        smithyEffect(&testG, handpos);
+        //smithyEffect(&testG, handpos);
+        smithy_card(0, &testG, handpos);
 
         // ----------- TEST 1: +3 cards to hand count --------------
         printf("TEST 1 (%d): +3 cards to hand count (before discard)\n", currTest);
